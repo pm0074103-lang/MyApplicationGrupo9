@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0F0E17" android:orientation="vertical" android:padding="16dp">
+    <!--  PANEL DE CONFIGURACIÓN  -->
+    <ScrollView android:id="@+id/panelSetup" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="8dp" android:layout_marginBottom="16dp" android:text="⚔️ Configurar Equipos y Parámetros ⚔️" android:textColor="#FFD700" android:textSize="20sp" android:textStyle="bold"/>
+            <!--  TARJETA EQUIPO A (NEÓN CIAN)  -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:cardBackgroundColor="#1A192B" app:cardCornerRadius="16dp" app:cardElevation="6dp" app:strokeColor="#00F5FF" app:strokeWidth="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="[ PLAYER 1 - Equipo A ]" android:textColor="#00F5FF" android:textSize="16sp" android:textStyle="bold"/>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:hint="Nombre del Guerrero" android:textColorHint="#8800F5FF" app:boxCornerRadiusBottomEnd="8dp" app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusTopEnd="8dp" app:boxCornerRadiusTopStart="8dp" app:boxStrokeColor="#00F5FF" app:hintTextColor="#00F5FF">
+                        <EditText android:id="@+id/etNombreA1" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:text="Guerrero" android:textColor="#FFFFFF"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--  SPINNER OCULTO PARA COMPATIBILIDAD  -->
+                    <Spinner android:id="@+id/spTipoA1" android:layout_width="match_parent" android:layout_height="0dp" android:visibility="gone"/>
+                    <!--  SELECCIÓN DE CLASE JUGADOR 1  -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:orientation="horizontal">
+                        <Button android:id="@+id/btnGuerreroA" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="40dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:backgroundTint="#2200F5FF" android:text="🛡️ Guerrero" android:textColor="#00F5FF" android:textSize="11sp" app:cornerRadius="8dp" app:strokeColor="#00F5FF"/>
+                        <Button android:id="@+id/btnItemA" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="40dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="⚔️ Item 1" android:textColor="#88FFFFFF" android:textSize="11sp" app:cornerRadius="8dp" app:strokeColor="#44FFFFFF"/>
+                        <Button android:id="@+id/btnMagoA" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:text="🪄 Mago 1" android:textColor="#88FFFFFF" android:textSize="11sp" app:cornerRadius="8dp" app:strokeColor="#44FFFFFF"/>
+                    </LinearLayout>
+                    <!--  ESTADÍSTICAS ARCADE A  -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#25243A" android:orientation="horizontal" android:padding="8dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="❤️ Health" android:textColor="#00F5FF" android:textSize="12sp"/>
+                            <EditText android:id="@+id/etVidaA1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:gravity="center" android:inputType="number" android:text="120" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚔️ Attack" android:textColor="#00F5FF" android:textSize="12sp"/>
+                            <EditText android:id="@+id/etAtaqueA1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:gravity="center" android:inputType="number" android:text="20" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛡️ Defensa" android:textColor="#00F5FF" android:textSize="12sp"/>
+                            <EditText android:id="@+id/etDefensaA1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:gravity="center" android:inputType="number" android:text="10" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!--  TARJETA EQUIPO B (NEÓN FUCSIA)  -->
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" app:cardBackgroundColor="#1A192B" app:cardCornerRadius="16dp" app:cardElevation="6dp" app:strokeColor="#FF007F" app:strokeWidth="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="[ PLAYER 2 - Equipo B ]" android:textColor="#FF007F" android:textSize="16sp" android:textStyle="bold"/>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:hint="Nombre del Guerrero" android:textColorHint="#88FF007F" app:boxCornerRadiusBottomEnd="8dp" app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusTopEnd="8dp" app:boxCornerRadiusTopStart="8dp" app:boxStrokeColor="#FF007F" app:hintTextColor="#FF007F">
+                        <EditText android:id="@+id/etNombreB1" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:text="Mago 1" android:textColor="#FFFFFF"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--  SPINNER OCULTO PARA COMPATIBILIDAD  -->
+                    <Spinner android:id="@+id/spTipoB1" android:layout_width="match_parent" android:layout_height="0dp" android:visibility="gone"/>
+                    <!--  SELECCIÓN DE CLASE JUGADOR 2  -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:orientation="horizontal">
+                        <Button android:id="@+id/btnGuerreroB" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="40dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="🛡️ Guerrero" android:textColor="#88FFFFFF" android:textSize="11sp" app:cornerRadius="8dp" app:strokeColor="#44FFFFFF"/>
+                        <Button android:id="@+id/btnItemB" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="40dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:text="⚔️ Item 1" android:textColor="#88FFFFFF" android:textSize="11sp" app:cornerRadius="8dp" app:strokeColor="#44FFFFFF"/>
+                        <Button android:id="@+id/btnMagoB" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:backgroundTint="#22FF007F" android:text="🪄 Mago 1" android:textColor="#FF007F" android:textSize="11sp" app:cornerRadius="8dp" app:strokeColor="#FF007F"/>
+                    </LinearLayout>
+                    <!--  ESTADÍSTICAS ARCADE B  -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#25243A" android:orientation="horizontal" android:padding="8dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="❤️ Health" android:textColor="#FF007F" android:textSize="12sp"/>
+                            <EditText android:id="@+id/etVidaB1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:gravity="center" android:inputType="number" android:text="80" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚔️ Attack" android:textColor="#FF007F" android:textSize="12sp"/>
+                            <EditText android:id="@+id/etAtaqueB1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:gravity="center" android:inputType="number" android:text="15" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛡️ Defensa" android:textColor="#FF007F" android:textSize="12sp"/>
+                            <EditText android:id="@+id/etDefensaB1" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:gravity="center" android:inputType="number" android:text="5" android:textColor="#FFFFFF" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <!--  BOTÓN PRESS START  -->
+            <Button android:id="@+id/btnConfirmar" android:layout_width="match_parent" android:layout_height="56dp" android:backgroundTint="#FFD700" android:text="🔥 PRESS START TO FIGHT 🔥" android:textColor="#0F0E17" android:textSize="15sp" android:textStyle="bold" app:cornerRadius="28dp" app:strokeColor="#FFFFFF" app:strokeWidth="2dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <!--  PANEL DE COMBATE ARCADE  -->
+    <LinearLayout android:id="@+id/panelCombate" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:visibility="gone">
+        <TextView android:id="@+id/tvEstadoRonda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginBottom="12dp" android:text="ROUND 1" android:textColor="#FFD700" android:textSize="20sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="P1 HEALTH" android:textColor="#00F5FF" android:textStyle="bold"/>
+        <ProgressBar android:id="@+id/pbVidaA" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="24dp" android:layout_marginBottom="12dp" android:max="100" android:progress="100" android:progressTint="#00F5FF"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="P2 HEALTH" android:textColor="#FF007F" android:textStyle="bold"/>
+        <ProgressBar android:id="@+id/pbVidaB" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="24dp" android:layout_marginBottom="16dp" android:max="100" android:progress="100" android:progressTint="#FF007F"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:orientation="horizontal">
+            <Button android:id="@+id/btnAtacar" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:backgroundTint="#FF007F" android:text="⚔️ ATTACK" android:textColor="#FFFFFF" android:textStyle="bold" app:cornerRadius="8dp"/>
+            <Button android:id="@+id/btnEstrategia" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginStart="4dp" android:layout_weight="1" android:backgroundTint="#00F5FF" android:text="🛡️ ABILITY" android:textColor="#0F0E17" android:textStyle="bold" app:cornerRadius="8dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tvLog" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:background="#1A192B" android:padding="12dp" android:scrollbars="vertical" android:text="> BATTLE STARTED...\n" android:textColor="#00FF66" android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>
